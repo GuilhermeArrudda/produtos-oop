@@ -1,4 +1,4 @@
-import Item from "./Item";
+import { Item } from "./Item";
 
 export default abstract class TaxItem extends Item {
 	constructor(description: string, price: number) {

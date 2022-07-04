@@ -1,8 +1,8 @@
-import Item from "./Item";
+import { Item } from "./Item";
 import TaxItem from "./TaxItem";
 
 export default class Order {
-	public items: Item[]
+	private items: Item[]
 	
 	constructor() {
 		this.items = []
@@ -14,11 +14,7 @@ export default class Order {
 	}
 
 	getTotal() {
-		let sum = 0
-
-		this.items.forEach((item) => sum += item.price)
-
-		return sum
+		return this.items.reduce((total, item) => total + item.price, 0)
 	}
 
 	getTaxes() {

@@ -1,6 +1,6 @@
 import TaxItem from "./TaxItem";
 
-export default abstract class Item {
+export abstract class Item {
 	public description: string
 	public price: number
 
